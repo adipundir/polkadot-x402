@@ -9,6 +9,11 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@polkadot/api": "^16.5.2",
+    "@polkadot/extension-dapp": "^0.62.4",
+    "@polkadot/util": "^13.5.8",
+    "@polkadot/util-crypto": "^13.5.8",
+    "axios": "^1.13.2",
     "next": "16.0.3",
     "react": "19.2.0",
     "react-dom": "19.2.0"
