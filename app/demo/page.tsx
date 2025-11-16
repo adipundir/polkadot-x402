@@ -346,45 +346,6 @@ export default function DemoPage() {
                 </div>
               )}
 
-              {/* Payment Details */}
-              {demoState.status === 'success' && demoState.paymentDetails && (
-                <div className="bg-[color:var(--tone-light)]/50 border border-[color:var(--tone-border)] rounded-xl p-6">
-                  <p className="text-xs uppercase tracking-[0.3em] text-[color:var(--tone-dark)]/60 mb-4">Payment Details</p>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex justify-between">
-                      <span className="text-[color:var(--tone-dark)]/70">Amount:</span>
-                      <span className="text-[color:var(--tone-dark)] font-semibold">
-                        {demoState.paymentDetails.amount && Number(demoState.paymentDetails.amount) > 0
-                          ? (Number(demoState.paymentDetails.amount) / 1e18).toFixed(6) + ' PAS'
-                          : 'N/A'}
-                      </span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-[color:var(--tone-dark)]/70">Network:</span>
-                      <span className="text-[color:var(--tone-dark)] font-semibold">
-                        {demoState.paymentDetails.network || 'N/A'}
-                      </span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-[color:var(--tone-dark)]/70">Token:</span>
-                      <span className="text-[color:var(--tone-dark)] font-semibold">
-                        {demoState.paymentDetails.token === 'native' ? 'Native (PAS)' : (demoState.paymentDetails.token || 'N/A')}
-                      </span>
-                    </div>
-                    {demoState.paymentDetails.payTo && (
-                      <div className="flex justify-between">
-                        <span className="text-[color:var(--tone-dark)]/70">Pay To:</span>
-                        <span className="text-[color:var(--tone-dark)] font-semibold font-mono text-xs">
-                          {demoState.paymentDetails.payTo.length > 20
-                            ? `${demoState.paymentDetails.payTo.substring(0, 10)}...${demoState.paymentDetails.payTo.substring(38)}`
-                            : demoState.paymentDetails.payTo}
-                        </span>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              )}
-
               {/* Request Headers */}
               {demoState.status === 'success' && demoState.requestHeaders && Object.keys(demoState.requestHeaders).length > 0 && (
                 <div>
