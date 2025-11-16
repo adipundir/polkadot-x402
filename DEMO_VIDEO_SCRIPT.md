@@ -1,5 +1,3 @@
-# Polkadot x402 Demo Video Script
-
 Hi everyone, introducing Polkadot x402.
 
 ## Slide 1: What is x402?
